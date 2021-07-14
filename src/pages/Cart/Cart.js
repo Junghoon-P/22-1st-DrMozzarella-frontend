@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Nav from '../../components/Nav/Nav';
 import CartList from './CartlList/CartList';
 import { CART_API } from '../../config';
 import { USDfomating } from '../../Fomating';
