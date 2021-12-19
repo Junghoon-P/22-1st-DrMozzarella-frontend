@@ -44,25 +44,25 @@
         Nav에서 드롭다운시 나오는 카테고리를 선택하게 되면 해당 페이지로 동적라우팅을 통해 이동하도록 구현했습니다.
 ### 기억에 남는 코드
     
-    ```jsx
+```jsx
     //ex
     handleClickPrev() {            //지양
     
     handleClickPrev = () => {.     //권장
-    ```
+```
     
    - 이벤트에 콜백 함수로 넘겼을 때 this가 동적으로 바뀌면서 문제가 될 수 있습니다.
         따라서 class 컴포넌트에서는 가급적 화살표 함수로 써주는걸 권장합니다.
         +@ 바인드와 같은 원리라 .bind()를 써주는 것도 가능하지만 굳이 쓸 이유는 없습니다.
         
     
-    ```jsx
+```jsx
     <i className="fas fa-chevron-left fa-4x" 
     		onClick={() => this.handleClickPrev()} />
                   
     <i className="fas fa-chevron-left fa-4x"
         onClick={this.handleClickPrev} />
-    ```
+```
     
    - 새로 함수 인스턴스를 만들지 않고 함수를 직접 넘겨주는 것이 좋습니다.
     - 해당 부분이 실행될 때마다 기존에 **생성해놓은 함수를 호출** 하는것이 아니라 **새로운 함수를 생성해서 실행하는 방식** 이라서 비효율적이라고 할 수 있습니다.
